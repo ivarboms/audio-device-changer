@@ -63,7 +63,6 @@ std::unordered_map<std::wstring, std::wstring> getAudioOutputDevices()
                   hr = pStore->GetValue(PKEY_Device_FriendlyName, &friendlyName);
                   if (SUCCEEDED(hr))
                   {
-                    devices[boost::to_lower_copy(std::wstring(friendlyName.pwszVal))] = wstrID;
                     devices[friendlyName.pwszVal] = wstrID;
 
                     PropVariantClear(&friendlyName);
