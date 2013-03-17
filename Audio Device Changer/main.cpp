@@ -98,12 +98,12 @@ int wmain(int argc, wchar_t* argv[])
   if (!devices.empty())
   {
     const std::wstring vengeance2000Name(L"Headphones (Vengeance 2000)");
-    const std::wstring xonarD1Name(L"Speakers (ASUS Xonar D1 Audio Device)");
+    const std::wstring motherboardName(L"Speakers (High Definition Audio Device)");
 
     for (const auto& device : devices)
     {
       if ((device.first == vengeance2000Name && wcsstr(argv[1], L"v") != nullptr)
-        || (device.first == xonarD1Name && wcsstr(argv[1], L"x") != nullptr))
+        || (device.first == motherboardName && wcsstr(argv[1], L"x") != nullptr))
       {
         SetDefaultAudioPlaybackDevice(device.second.c_str());
         wprintf(L"Audio device set to '%s'\n", device.first.c_str());
