@@ -11,5 +11,4 @@
 #include <Functiondiscoverykeys_devpkey.h>
 
 #include <string>
-#include <boost/algorithm/string.hpp>
 #include <unordered_map>
